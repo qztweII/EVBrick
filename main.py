@@ -20,6 +20,11 @@ MotorR = Motor(Port.C)
 
 # Write your program here.
 Driver = DriveBase(MotorL, MotorR, wheel_diameter = 55, axle_track = 104)
+for i in range(10):
+    Driver.straight(10)
+    Driver.turn(36)
+    ev3.speaker.beep()
+    Driver.straight(-20)
 
 Driver.straight(100)
 Driver.straight(-100)
