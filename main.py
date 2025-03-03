@@ -30,7 +30,6 @@ while True:
     Driver.straight(100)
     Driver.straight(-100)
     ev3.speaker.beep()
-    00000
     Driver.turn(360)
     Driver.turn(-360)
     ev3.speaker.beep()
