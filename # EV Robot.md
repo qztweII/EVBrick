@@ -10,3 +10,5 @@
 >Day 3-1: First bit of code done. Hopefully getting on to testing it soon.
 
 >Day 3-2: Finally got access to a USB cable and we are now able to test the robot and our code. From observation, our code is working completely as intended. We shall now start the process of taking over the world >:)
+
+>
