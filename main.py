@@ -27,10 +27,10 @@ while True:
         Driver.straight(randint(10, 100))
         Driver.turn(36)
         ev3.speaker.beep()
-        Driver.straight(randint(-10, -100))
+        Driver.straight(randint(-100, -10))
 
-    Driver.straight(r.randint(1, 100))
-    Driver.straight(r.randint(-1, -100))
+    Driver.straight(randint(1, 100))
+    Driver.straight(randint(-100, -1))
     ev3.speaker.beep()
     Driver.turn(360)
     Driver.turn(-360)
