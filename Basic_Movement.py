@@ -7,8 +7,7 @@ from pybricks.tools import wait, StopWatch, DataLog
 from pybricks.robotics import DriveBase
 from pybricks.media.ev3dev import SoundFile, ImageFile
 
-from random import randint
-
+import time
 
 # This program requires LEGO EV3 MicroPython v2.0 or higher.
 # Click "Open user guide" on the EV3 extension tab for more information.
@@ -17,21 +16,9 @@ from random import randint
 # Create your objects here.
 ev3 = EV3Brick()
 
-MotorL = Motor(Port.C)
-MotorR = Motor(Port.B)
+MotorL = Motor(Port.B)
+MotorR = Motor(Port.C)
 
 # Write your program here.
-while True:
-    Driver = DriveBase(MotorL, MotorR, wheel_diameter = 55, axle_track = 104)
-    for i in range(10):
-        Driver.straight(randint(10, 100))
-        Driver.turn(36)
-        ev3.speaker.beep()
-        Driver.straight(randint(-100, -10))
-
-    Driver.straight(randint(1, 100))
-    Driver.straight(randint(-100, -1))
-    ev3.speaker.beep()
-    Driver.turn(360)
-    Driver.turn(-360)
-    ev3.speaker.beep()
+Driver = DriveBase(MotorL, MotorR, wheel_diameter = 55, axle_track = 104)
+Driver.straight().run_time(180, 2000)
