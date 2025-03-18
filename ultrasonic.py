@@ -20,8 +20,8 @@ left = Motor(Port.C)
 right = Motor(Port.B)
 
 def ReadDistance():
-    distance = ultrasonic.distance()
-    return distance
+    far = ultrasonic.distance()
+    return far
 
 def RunTimeDrive(motor1, motor2, speed, time):
     motor1.run_time(speed, time, wait=False, then=Stop.COAST)
@@ -30,8 +30,14 @@ def RunTimeDrive(motor1, motor2, speed, time):
 ev3.speaker.beep()
 
 while True:
-    RunTimeDrive(left, right, 60, 10000)
+    RunTimeDrive(left, right, 360, 10000)
     sleep(1)
     ev3.speaker.beep()
-    if ReadDistance < 100:
-        left.run_time(360, 1000, wait=True, then=Stop.COAST)
+    farness = ReadDistance()
+    if farness < 200:
+        left.brake()
+        right.brake()
+        RunTimeDrive(left, right, -360, 1000)
+        sleep(1)
+        left.run_time(360, 1000, True, then=Stop.COAST)
+        right.run_time(-360, 1000, True, then=Stop.COAST)
