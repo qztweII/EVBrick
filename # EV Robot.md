@@ -11,4 +11,6 @@
 
 >Day 3-2: Finally got access to a USB cable and we are now able to test the robot and our code. From observation, our code is working completely as intended. We shall now start the process of taking over the world >:)
 
->
+>Day 4: We did some more coding. This included the use of ultrasonic sensors. This will allow our bot to see if it is close enough to a thing. Terence had also figured out how to get the wheels to turn at the same time. 
+
+>Day 5: 
